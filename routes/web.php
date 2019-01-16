@@ -83,6 +83,7 @@ Route::group([
 
     //Appoinments Route
         Route::get('dashboard/all-appoinments', 'AppoinmentController@index')->name('all.appoiments');
+        Route::put('dashboard/update-appoinment/{id}', 'AppoinmentController@update');
 
     //Logout Routes
         Route::get('logout', 'DashboardController@logout')->name('logout');
@@ -91,4 +92,4 @@ Route::group([
 
 Auth::routes();
 
-Route::post('make-appoinment', 'HomeController@store')->name('make.appoinment');
+Route::post('make-appoinment', 'dashboard/AppoinmentController@store')->name('make.appoinment');

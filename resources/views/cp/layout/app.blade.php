@@ -8,6 +8,7 @@
         <meta content="Admin Dashboard" name="description" />
         <meta content="Mannatthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <link rel="shortcut icon" href="{{ asset('assets/assets/images/favicon.ico') }}">
 
@@ -20,6 +21,14 @@
 
         <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+
+        <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        </script>
         <style>
 
           .logo{

@@ -1,8 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\dashboard;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+use App\Appoinment;
 
 class AppoinmentController extends Controller
 {
@@ -13,7 +16,9 @@ class AppoinmentController extends Controller
      */
     public function index()
     {
-        
+        $data['appoinments'] = Appoinment::latest()->whereConfirm_status(0)->get();
+
+        return view('cp.appoinment.index', $data);
     }
 
     /**
@@ -68,7 +73,8 @@ class AppoinmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       $data = Appoinment::find($id)->update($request->all());
+       return response()->json($data);
     }
 
     /**

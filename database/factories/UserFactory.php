@@ -55,6 +55,7 @@ $factory->define(App\Appoinment::class, function(Faker $faker){
         'phone' => $faker->phoneNumber,
         'department_id' => 2,
         'doctor_id' => 2, 
+        'confirm_status' => 0,
         'appoinment_date' => $faker->dateTime,
     ];
 });

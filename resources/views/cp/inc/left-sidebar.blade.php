@@ -157,11 +157,27 @@
 
     <li class="menu-title">Apoinments and others</li>
 
-    <li>
-        <a href="{{ route('all.appoiments') }}" class="waves-effect">
-            <i class="fa fa fa-wheelchair-alt air"></i> <span>Appoinments </span> 
+    <li class="has_sub">
+        <a href="javascript:void(0);" class="waves-effect">
+            <i class="fa fa-wheelchair-alt air"></i> <span>Appoinments </span> 
+            <span class="float-right"><i class="mdi mdi-chevron-right"></i>
+            </span>
         </a>
+        <ul class="list-unstyled">
+            <li>
+                <a href="{{ route('all.appoiments') }}">New Appoinments</a>
+            </li>
+            <li>
+                <a href="#">Confirmed Appoinments</a>
+            <li>     
+            <li>
+                <a href="#">Create Appoinment</a>
+            <li>       
+        </ul>
     </li>
+
+
+
 
     <li>
         <a href="#" class="waves-effect">

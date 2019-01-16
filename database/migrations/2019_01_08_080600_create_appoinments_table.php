@@ -20,7 +20,9 @@ class CreateAppoinmentsTable extends Migration
             $table->string('phone');
             $table->integer('department_id')->unsigned();
             $table->integer('doctor_id')->unsigned();
+            $table->integer('confirm_status')->unsigned();
             $table->dateTime('appoinment_date');
+            $table->string('appoinment_time')->nullable();
             $table->timestamps();
         });
     }

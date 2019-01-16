@@ -101,7 +101,7 @@ class DoctorController extends Controller
      */
     public function update(Request $rq, $id)
     {
-  // dd($rq->all());
+//   dd($rq->all());
         $rq->validate([
             'name' => 'required|max:191',
             'phone' => 'required|max:191',
