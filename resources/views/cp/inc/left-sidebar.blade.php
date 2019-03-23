@@ -168,7 +168,7 @@
                 <a href="{{ route('all.appoiments') }}">New Appoinments</a>
             </li>
             <li>
-                <a href="#">Confirmed Appoinments</a>
+                <a href="{{ route('confirmed.appoiments') }}">Confirmed Appoinments</a>
             <li>     
             <li>
                 <a href="#">Create Appoinment</a>

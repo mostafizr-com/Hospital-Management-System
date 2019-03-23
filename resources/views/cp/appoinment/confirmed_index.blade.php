@@ -1,4 +1,5 @@
 @extends('cp.layout.app')
+
 @section('content')
 <div class="row">
     <div class="col-md-12 col-lg-12 align-self-center">
@@ -10,13 +11,14 @@
 
                             <thead>
                                 <tr>
-                                    <th class="border-top-0">Sr</th>
+                                    {{-- <th class="border-top-0">Sr</th> --}}
                                     <th class="border-top-0">Name</th>
                                     <th class="border-top-0">Email</th>
-                                    <th class="border-top-0">Phone</th>
+                                    <th class="border-top-0">Phone no</th>
                                     <th class="border-top-0">Department</th>
                                     <th class="border-top-0">Doctor</th>
-                                    <th class="border-top-0">Appoinment Date</th>
+                                    <th class="border-top-0">Date</th>
+                                    <th class="border-top-0">Time</th>
                                     <th class="border-top-0">Action</th>
                                 </tr>
                             </thead>
@@ -36,15 +38,15 @@
         $('#appoinmet-table').DataTable({
             processing: true,
             serverSide: true,
-            ajax: "{!! route('get.appoiments') !!}",
+            ajax: "{!! route('get.confimed') !!}",
             columns: [
-                { data: 'sr', orderable: false, searchable: false},
                 { data: 'name'},
                 { data: 'email'},
                 { data: 'phone'},
                 { data: 'department_id' },
                 { data: 'doctor_id' },
                 { data: 'appoinment_date' },
+                { data: 'appoinment_time'},
                 { data: 'action', orderable: false, searchable: false }
             ]
         });   

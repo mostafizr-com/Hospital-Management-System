@@ -17,10 +17,13 @@ window.Vue = require('vue');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
+
+Vue.component('example-component', require('./components/ExampleComponent.vue') );
+Vue.component('appoinment-table', require('./components/AppoinmentTable.vue') );
+Vue.component('appoinment-button', require('./components/Appoinmentbutton.vue') );
+Vue.component('confirmed-appoinment', require('./components/ConfirmedAppoinment.vue') );
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,5 +32,29 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+
+    data:{
+        name:"",
+        edit:true,
+    },
+
+    methods: {
+        delet_appoinment(id){
+            console.log(id);
+        }
+    },
+
+    filters:{
+        permalink: function(e){
+            var str = e.trim();
+            str = str.toLowerCase();
+            permalink = str.replace(/[\s?.,='"^#*@$%><!]/g, '-'); 
+            permalink = permalink.replace(/-+/g,'-');     
+            permalink = permalink.substring(0, 25);
+            permalink = permalink.trim();
+            return permalink;
+
+        }
+    }
 });

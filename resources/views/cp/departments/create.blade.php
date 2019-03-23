@@ -2,7 +2,8 @@
 
 @section('content')
 
-<div class="row clearfix" id="vueapp">
+<div class="row clearfix" >
+
     <div class="col-12">
         <div class="card m-b-30">
 
@@ -108,26 +109,26 @@
     // });
     
     
-var container = new Vue({
+// var container = new Vue({
 
-        el: '#vueapp',
-        data:{
-            name:"",
-            // edit:true,
-        },
-        filters:{
-            permalink: function(e){
-                        var str = e.trim();
-                        str = str.toLowerCase();
-                        permalink = str.replace(/[\s?.,='"^#*@$%><!]/g, '-'); 
-                        permalink = permalink.replace(/-+/g,'-');     
-                        permalink = permalink.substring(0, 25);
-                        permalink = permalink.trim();
-                        return permalink;
+//         el: '#vueapp',
+//         data:{
+//             name:"",
+//             // edit:true,
+//         },
+//         filters:{
+//             permalink: function(e){
+//                         var str = e.trim();
+//                         str = str.toLowerCase();
+//                         permalink = str.replace(/[\s?.,='"^#*@$%><!]/g, '-'); 
+//                         permalink = permalink.replace(/-+/g,'-');     
+//                         permalink = permalink.substring(0, 25);
+//                         permalink = permalink.trim();
+//                         return permalink;
             
-                    }
-        }
-});
+//                     }
+//         }
+// });
 
 // $(document).ready(function(){
 //        $('#remove_disable').on('click', function(){

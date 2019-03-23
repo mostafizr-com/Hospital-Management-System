@@ -10,18 +10,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <link rel="shortcut icon" href="{{ asset('assets/assets/images/favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ asset('/assets/images/favicon.ico') }}">
 
         <link href="{{ asset('assets/plugins/morris/morris.css') }}" rel="stylesheet">
 
-        <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('assets/plugins/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
 
+        
         <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
-
+        
         <script>
         $.ajaxSetup({
             headers: {
@@ -147,7 +147,6 @@
                             @endif
                         
 
-
                             
                         @yield('content')
 
@@ -170,51 +169,52 @@
         </div>
         <!-- END wrapper -->
 
-        <!-- jQuery  -->
-        <script src="{{ asset('assets/js/popper.min.js') }}"></script>
-        <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('assets/js/modernizr.min.js') }}"></script>
-        <script src="{{ asset('assets/js/detect.js') }}"></script>
-        <script src="{{ asset('assets/js/fastclick.js') }}"></script>
-        <script src="{{ asset('assets/js/jquery.slimscroll.js') }}"></script>
-        <script src="{{ asset('assets/js/jquery.blockUI.js') }}"></script>
-        <script src="{{ asset('assets/js/waves.js') }}"></script>
-        <script src="{{ asset('assets/js/jquery.nicescroll.js') }}"></script>
-        <script src="{{ asset('assets/js/jquery.scrollTo.min.js') }}"></script>
-
-         <!-- Required datatable js -->
-         <script src="{{ asset('assets/plugins/datatables/jquery.dataTables.min.js') }}"></script>
-         <script src="{{ asset('assets/plugins/datatables/dataTables.bootstrap4.min.js') }}"></script>
-         <!-- Buttons examples -->
-         <script src="{{ asset('assets/plugins/datatables/dataTables.buttons.min.js') }}"></script>
-         <script src="{{ asset('assets/plugins/datatables/buttons.bootstrap4.min.js') }}"></script>
-         <script src="{{ asset('assets/plugins/datatables/jszip.min.js') }}"></script>
-         <script src="{{ asset('assets/plugins/datatables/pdfmake.min.js') }}"></script>
-         <script src="{{ asset('assets/plugins/datatables/vfs_fonts.js') }}"></script>
-         <script src="{{ asset('assets/plugins/datatables/buttons.html5.min.js') }}"></script>
-         <script src="{{ asset('assets/plugins/datatables/buttons.print.min.js') }}"></script>
-         <script src="{{ asset('assets/plugins/datatables/buttons.colVis.min.js') }}"></script>
-         <!-- Responsive examples -->
-         <script src="{{ asset('assets/plugins/datatables/dataTables.responsive.min.js') }}"></script>
-         <script src="{{ asset('assets/plugins/datatables/responsive.bootstrap4.min.js') }}"></script>
- 
-         <!-- Datatable init js -->
-         <script src="{{ asset('assets/pages/datatables.init.js') }}"></script>
-
-        <!-- App js -->
-        <script src="{{ asset('assets/js/app.js') }}"></script>
-
-        {{-- <script type="text/javascript">
-            $(document).ready(function() {
-                $('#datatable').DataTable();  
-            } );
-        </script> --}}
-
-
-        @stack('js')
-       
-
      </div>
+
+    <script src="{{ asset('js/app.js') }}"></script>
+    <!-- jQuery  -->
+    <script src="{{ asset('assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/modernizr.min.js') }}"></script>
+    <script src="{{ asset('assets/js/detect.js') }}"></script>
+    <script src="{{ asset('assets/js/fastclick.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.slimscroll.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.blockUI.js') }}"></script>
+    <script src="{{ asset('assets/js/waves.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.nicescroll.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.scrollTo.min.js') }}"></script>
+
+    <!-- Required datatable js -->
+    <script src="{{ asset('assets/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/datatables/dataTables.bootstrap4.min.js') }}"></script>
+    <!-- Buttons examples -->
+    <script src="{{ asset('assets/plugins/datatables/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/datatables/buttons.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/datatables/jszip.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/datatables/pdfmake.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/datatables/vfs_fonts.js') }}"></script>
+    <script src="{{ asset('assets/plugins/datatables/buttons.html5.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/datatables/buttons.print.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/datatables/buttons.colVis.min.js') }}"></script>
+    <!-- Responsive examples -->
+    <script src="{{ asset('assets/plugins/datatables/dataTables.responsive.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/datatables/responsive.bootstrap4.min.js') }}"></script>
+
+    <!-- Datatable init js -->
+    <script src="{{ asset('assets/pages/datatables.init.js') }}"></script>
+
+    <!-- App js -->
+    <script src="{{ asset('assets/js/app.js') }}"></script>
+
+    {{-- <script type="text/javascript">
+        $(document).ready(function() {
+            $('#datatable').DataTable();  
+        } );
+    </script> --}}
+
+
+    @stack('js')
+            
 
 </body>
 </html>
